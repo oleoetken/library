@@ -1,1 +1,1 @@
-# library
+In this project I will create a small library app to show and practice the javascript knowledge I learned
