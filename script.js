@@ -18,7 +18,15 @@ function Book(title, author, pages, read) {
 console.log(theHobbit.info());*/
 
 function addBooktToLibrary(title, author, pages, read) {
-    const book = new Book("The Hobbit", "J.R.R. Tolkien", 295, false);
+    let book = new Book(title, author, pages, read);
     myLibrary.push(book);
 }
 
+function displayBooks() {
+    for (let book of myLibrary) {
+        console.log(book);
+    }
+}
+
+addBooktToLibrary("The Hobbit", "J.R.R. Tolkien", 295, false);
+displayBooks();
