@@ -1,3 +1,4 @@
+const container = document.querySelector(".container");
 const myLibrary = [];
 
 function Book(title, author, pages, read) {
@@ -23,10 +24,35 @@ function addBooktToLibrary(title, author, pages, read) {
 }
 
 function displayBooks() {
+    container.replaceChildren();
+
     for (let book of myLibrary) {
+        const card = document.createElement("div");
+        card.classList.add("book-card");
+
+        const titleElement = document.createElement("p");
+        titleElement.textContent = "Title: " + book.title;
+
+        const authorElement = document.createElement("p");
+        authorElement.textContent = "Author: " + book.author;
+
+        const pagesElement = document.createElement("p");
+        pagesElement.textContent = "Pages: " + book.pages;
+
+        const readElement = document.createElement("p");
+        readElement.textContent = "Read: " + (book.read ? "Yes" : "No");
+
+        card.appendChild(titleElement);
+        card.appendChild(authorElement);
+        card.appendChild(pagesElement);
+        card.appendChild(readElement);
+
+        container.appendChild(card);
+
         console.log(book);
     }
 }
 
 addBooktToLibrary("The Hobbit", "J.R.R. Tolkien", 295, false);
+addBooktToLibrary("The Lord of the Rings", "J.R.R Tolkien", 1077, false);
 displayBooks();
