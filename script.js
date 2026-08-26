@@ -53,6 +53,18 @@ function displayBooks() {
     }
 }
 
+const showButton = document.getElementById("showDialog");
+const dialogForm = document.getElementById("dialogForm");
+const closeButton = document.getElementById("closeButton");
+
+showButton.addEventListener("click", () => {
+    dialogForm.showModal();
+});
+
+closeButton.addEventListener("click", () => {
+    dialogForm.close();
+})
+
 addBooktToLibrary("The Hobbit", "J.R.R. Tolkien", 295, false);
 addBooktToLibrary("The Lord of the Rings", "J.R.R Tolkien", 1077, false);
 displayBooks();

@@ -9,9 +9,9 @@
 </head>
 <body>
     <div class="container"></div>
-    <button command="show-modal" commandfor="my-dialog">New Book</button>
+    <button id="showDialog">New Book</button>
 
-    <dialog id="my-dialog">
+    <dialog id="dialogForm">
         <form method="dialog">
             <p>
                 <label>
@@ -37,10 +37,9 @@
                     <input type="text" />
                 </label>
             </p>
+            <button id="closeButton">Close</button>
+            <input type="submit" id="submitButton" value="Add" />
         </form>
-        <p>
-            <button commandfor="my-dialog" command="close">Close</button>
-        </p>
     </dialog>
 </body>
 </html>
