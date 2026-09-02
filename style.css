@@ -10,3 +10,11 @@
     width: 200px;
     box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.15);
 }
+
+#dialogForm label {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+}
